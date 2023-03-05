@@ -15,7 +15,7 @@
   \**********************/
 /***/ (() => {
 
-eval("// eslint-disable-next-line no-console\nconsole.log('Hello webpack');\n\n\n//# sourceURL=webpack://restaurant-webpage/./src/index.js?");
+eval("const content = document.getElementById(\"content\")\n\nfunction createHeader() {\n  const header = document.createElement(\"div\")\n  header.classList.add('header')\n\n  const restaurantName = document.createElement(\"h1\")\n  restaurantName.classList.add('restaurant-name')\n  restaurantName.textContent = 'The Odin Restaurant'\n\n  const home = document.createElement(\"a\")\n  home.href=\"home.js\"\n  home.classList.add('header-link')\n  home.textContent = 'Home'\n\n  const menu = document.createElement(\"a\")\n  menu.href=\"home.js\"\n  menu.classList.add('header-link')\n  menu.textContent = 'Menu'\n\n  const contact = document.createElement(\"a\")\n  contact.href=\"home.js\"\n  contact.classList.add('header-link')\n  contact.textContent = 'Contact'\n\n  header.appendChild(restaurantName)\n  header.appendChild(home)\n  header.appendChild(menu)\n  header.appendChild(contact)\n\n  return header\n}\n\ncontent.appendChild(createHeader())\n\n\n\n//# sourceURL=webpack://restaurant-webpage/./src/index.js?");
 
 /***/ })
 
