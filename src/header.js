@@ -4,9 +4,9 @@ export function createHeader() {
   header.innerHTML = `<header>
     <h1>The Odin Restaurant</h1>
     <div>
-      <button class="headerBtn">Home</button>
-      <button class="headerBtn">Menu</button>
-      <button class="headerBtn">Contact</button>
+      <button id="home-btn">Home</button>
+      <button id="menu-btn">Menu</button>
+      <button id="contact-btn">Contact</button>
     </div>
     </header>`
   

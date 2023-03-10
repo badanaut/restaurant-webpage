@@ -1,12 +1,26 @@
+import {initWebsite, pageContent} from "./init";
+import {createContactContent} from "./contact";
 import {createHomeContent} from "./home";
-import {createHeader} from "./header";
+import {createMenuContent} from "./menu";
 
-const content = document.getElementById('content');
+initWebsite();
 
+const homeBtn = document.getElementById('home-btn');
+const menuBtn = document.getElementById('menu-btn');
+const contactBtn = document.getElementById('contact-btn');
 
-function displayContent() {
-  content.appendChild(createHeader());
-  content.appendChild(createHomeContent());
-}
+homeBtn.addEventListener('click', () =>{
+  pageContent.removeChild(pageContent.lastChild)
+  pageContent.appendChild(createHomeContent())
+})
 
-displayContent();
+menuBtn.addEventListener('click', () =>{
+  pageContent.removeChild(pageContent.lastChild)
+  pageContent.appendChild(createMenuContent())
+})
+
+contactBtn.addEventListener('click', () =>{
+  pageContent.removeChild(pageContent.lastChild)
+  pageContent.appendChild(createContactContent())
+})
+

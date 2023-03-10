@@ -20,6 +20,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/header.js":
+/*!***********************!*\
+  !*** ./src/header.js ***!
+  \***********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"createHeader\": () => (/* binding */ createHeader)\n/* harmony export */ });\n// eslint-disable-next-line import/prefer-default-export\nfunction createHeader() {\n  const header = document.createElement('div');\n  header.innerHTML = `<header>\n    <h1>The Odin Restaurant</h1>\n    <div>\n      <button id=\"home-btn\">Home</button>\n      <button id=\"menu-btn\">Menu</button>\n      <button id=\"contact-btn\">Contact</button>\n    </div>\n    </header>`\n  \n  return header;\n}\n\n\n\n\n//# sourceURL=webpack://restaurant-webpage/./src/header.js?");
+
+/***/ }),
+
 /***/ "./src/home.js":
 /*!*********************!*\
   !*** ./src/home.js ***!
@@ -36,7 +46,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home */ \"./src/home.js\");\n/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./menu */ \"./src/menu.js\");\n/* harmony import */ var _contact__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./contact */ \"./src/contact.js\");\n\n\n\n\nconst content = document.getElementById('content');\nconst pages = document.querySelectorAll('.headerBtn');\nlet sectionContent = (0,_home__WEBPACK_IMPORTED_MODULE_0__.createHomeContent)();\n\nfunction createHeader() {\n  const header = document.createElement('div');\n  header.innerHTML = `<header>\n  <h1>The Odin Restaurant</h1>\n  <div>\n    <button class=\"headerBtn\">Home</button>\n    <button class=\"headerBtn\">Menu</button>\n    <button class=\"headerBtn\">Contact</button>\n  </div>\n  </header>`\n\n  return header;\n}\n\nfunction displayContent() {\n  content.appendChild(createHeader());\n  content.appendChild(sectionContent);\n}\n\ndisplayContent();\n\npages.forEach(page =>{\n  page.addEventListener('click', () =>{\n    // eslint-disable-next-line no-alert\n    alert(\"success\")\n    content.removeChild(content.lastChild)\n    // eslint-disable-next-line no-nested-ternary\n    sectionContent = page.textContent===\"Menu\" ? (0,_menu__WEBPACK_IMPORTED_MODULE_1__.createMenuContent)() :\n      page.textContent===\"Contact\" ? (0,_contact__WEBPACK_IMPORTED_MODULE_2__.createContactContent)() : (0,_home__WEBPACK_IMPORTED_MODULE_0__.createHomeContent)()\n    content.appendChild(sectionContent);\n    \n  })\n})\n\n\n//# sourceURL=webpack://restaurant-webpage/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _init__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./init */ \"./src/init.js\");\n/* harmony import */ var _contact__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./contact */ \"./src/contact.js\");\n/* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./home */ \"./src/home.js\");\n/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./menu */ \"./src/menu.js\");\n\n\n\n\n\n(0,_init__WEBPACK_IMPORTED_MODULE_0__.initWebsite)();\n\nconst homeBtn = document.getElementById('home-btn');\nconst menuBtn = document.getElementById('menu-btn');\nconst contactBtn = document.getElementById('contact-btn');\n\nhomeBtn.addEventListener('click', () =>{\n  _init__WEBPACK_IMPORTED_MODULE_0__.pageContent.removeChild(_init__WEBPACK_IMPORTED_MODULE_0__.pageContent.lastChild)\n  _init__WEBPACK_IMPORTED_MODULE_0__.pageContent.appendChild((0,_home__WEBPACK_IMPORTED_MODULE_2__.createHomeContent)())\n})\n\nmenuBtn.addEventListener('click', () =>{\n  _init__WEBPACK_IMPORTED_MODULE_0__.pageContent.removeChild(_init__WEBPACK_IMPORTED_MODULE_0__.pageContent.lastChild)\n  _init__WEBPACK_IMPORTED_MODULE_0__.pageContent.appendChild((0,_menu__WEBPACK_IMPORTED_MODULE_3__.createMenuContent)())\n})\n\ncontactBtn.addEventListener('click', () =>{\n  _init__WEBPACK_IMPORTED_MODULE_0__.pageContent.removeChild(_init__WEBPACK_IMPORTED_MODULE_0__.pageContent.lastChild)\n  _init__WEBPACK_IMPORTED_MODULE_0__.pageContent.appendChild((0,_contact__WEBPACK_IMPORTED_MODULE_1__.createContactContent)())\n})\n\n\n\n//# sourceURL=webpack://restaurant-webpage/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/init.js":
+/*!*********************!*\
+  !*** ./src/init.js ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"initWebsite\": () => (/* binding */ initWebsite),\n/* harmony export */   \"pageContent\": () => (/* binding */ pageContent)\n/* harmony export */ });\n/* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home */ \"./src/home.js\");\n/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./header */ \"./src/header.js\");\n\n\n\nconst pageContent = document.getElementById('content');\n\nfunction initWebsite() {\n  pageContent.appendChild((0,_header__WEBPACK_IMPORTED_MODULE_1__.createHeader)());\n  pageContent.appendChild((0,_home__WEBPACK_IMPORTED_MODULE_0__.createHomeContent)());\n}\n\n// eslint-disable-next-line import/prefer-default-export\n\n\n//# sourceURL=webpack://restaurant-webpage/./src/init.js?");
 
 /***/ }),
 
