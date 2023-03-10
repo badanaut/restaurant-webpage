@@ -3,7 +3,7 @@ function createHomeContent() {
   homeContent.classList.add('page-content');
   homeContent.innerHTML = `<section class="home">
   <p>Welcome to our restaurant, where we serve the most delicious food in town.</p>
-  <a href="#" class="btn">See Our Menu</a>
+  <button id="see-menu-btn">See Our Menu</a>
 </section>`;
 
   return homeContent;

@@ -1,0 +1,33 @@
+:root {
+    --header-bg-color: #4281a4;
+    --vertical-margin: 3vw;
+}
+body{
+    margin: 0;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: var(--header-bg-color);
+    color: white;
+    padding-left: var(--vertical-margin);
+    padding-right: var(--vertical-margin);
+}
+
+.header-buttons{
+    display: flex;
+    gap: var(--vertical-margin);
+    flex-grow: 1;
+    justify-content: flex-end;
+    
+}
+
+.header-buttons>button{
+    color: white;
+    border: none;
+    font-size: x-large;
+    background:none;
+    cursor: pointer;
+}
