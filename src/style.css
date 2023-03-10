@@ -1,5 +1,5 @@
 :root {
-    --header-bg-color: #4281a4;
+    --header-bg-color: #20262E;
     --vertical-margin: 3vw;
 }
 body{
@@ -30,4 +30,10 @@ header{
     font-size: x-large;
     background:none;
     cursor: pointer;
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
