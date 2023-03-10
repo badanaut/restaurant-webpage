@@ -7,7 +7,7 @@ const footer = document.createElement('footer')
 footer.innerHTML =`<p>&copy; 2023 The Odin Restaurant. All rights reserved.</p>`
 
 function initWebsite() {
-  pageContent.appendChild(createHeader());
+  bodyPage.insertBefore(createHeader(), bodyPage.firstChild);
   pageContent.appendChild(createHomeContent());
   bodyPage.appendChild(footer);
 }
