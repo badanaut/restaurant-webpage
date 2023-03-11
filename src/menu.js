@@ -1,29 +1,30 @@
+import seafood from "./images/seafood.jpg"
+import lambchops from "./images/lamb-chops.jpg"
+import cake from "./images/cake.jpg"
+
 function createMenuContent() {
-  const menuContent = document.createElement('div');
-  menuContent.classList.add('page-content');
-  menuContent.innerHTML = `<section class="menu">
-  <h2>Featured Dishes</h2>
-  <div class="menu-items">
+  const menuContent = document.createElement('section');
+  menuContent.classList.add('menu')
+  menuContent.innerHTML = `<div class="menu-items">
     <div class="menu-item">
-      <img src="dish1.jpg" alt="Dish 1">
-      <h3>Dish 1</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      <a href="#" class="btn">Order Now</a>
+      <img src="${seafood}" alt="Dish 1">
+      <div><h3>Poseidon's Seafood Paella</h3>
+      Poseidon was the Greek god of the sea and earthquakes. This paella is inspired by his connection to the ocean and is made with shrimp, mussels, clams, and saffron-infused rice. It's a flavorful and aromatic dish that will transport you to the shores of Greece.</div>
+      <a href="#" class="order-btn">Order Now</a>
     </div>
     <div class="menu-item">
-      <img src="dish2.jpg" alt="Dish 2">
-      <h3>Dish 2</h3>
-      <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <a href="#" class="btn">Order Now</a>
+      <img src="${lambchops}" alt="Dish 2">
+      <div><h3>Ares' Lamb Chops</h3>
+      Ares was the god of war and often associated with strength and power. This is a delicious and flavorful dish that combines the rich flavors of lamb with classic Greek herbs and spices. </div>
+      <a href="#" class="order-btn">Order Now</a>
     </div>
     <div class="menu-item">
-      <img src="dish3.jpg" alt="Dish 3">
-      <h3>Dish 3</h3>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <a href="#" class="btn">Order Now</a>
+      <img src="${cake}" alt="Dish 3">
+      <div><h3>Freya's Honey Cake</h3>
+      Freya is a Norse goddess associated with love, fertility, and beauty. These honey cakes are a sweet and delicious tribute to her.</div>
+      <a href="#" class="order-btn">Order Now</a>
     </div>
-  </div>
-  </section>`;
+  </div>`;
   
   return menuContent;
 }

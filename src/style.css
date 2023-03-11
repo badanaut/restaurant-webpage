@@ -4,12 +4,13 @@
 }
 body{
     margin: 0;
+    color: white;
+    height: 100%;
+    width: 100%;
     background-image: url('./images/albert-YYZU0Lo1uXE-unsplash.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
-    height: 100vh;
-    color: white;
 }
 
 
@@ -30,6 +31,14 @@ header{
     
 }
 
+.menu-items{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1f 1fr 1fr;
+    gap: 10px;
+
+}
+
 button{
     border: none;
     font-size: x-large;
@@ -39,21 +48,85 @@ button{
 }
 
 #content{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    width: 70vw;
-    padding: 5%;
-    background-color: rgba(0, 0, 0, 0.37);
+    background-color: rgba(0,0,0,0.5);
+    overflow: scroll;
+}
+#see-menu-btn{
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+    padding: 10px;
     border-radius: 5px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: xx-large;
+    background-color: rgba(216, 58, 0, 0.74);
+    
+}
+
+.order-btn{
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightsalmon;
+    color: white;
+    background-color: rgba(216, 58, 0, 0.74);
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
     font-weight: bold;
 }
-footer{
-    position: fixed;
-    bottom: 0;
-    width: 100vw;
-    text-align: center;
+button:active, a:active{
+    transform: translateY(1px);
 }
+
+.menu{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.menu-item{
+    width: 70vw;
+    height: 20vh;
+    display: grid;
+    grid-template-columns: 2fr 3fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 20px;
+    justify-content: center;
+}
+
+.menu-item img{
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    align-self: center;
+    border-radius: 7px;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.menu-item div{
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+.menu-item a{
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    align-self: center;
+}
+
+footer {
+    font-size: small;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--header-bg-color);
+  }
