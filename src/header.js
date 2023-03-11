@@ -8,9 +8,7 @@ export function createHeader() {
       <button id="menu-btn">Menu</button>
       <button id="contact-btn">Contact</button>
     </div>
-    </header>`
-  
+    </header>`;
+
   return header;
 }
-
-

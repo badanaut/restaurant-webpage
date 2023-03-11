@@ -1,10 +1,10 @@
-import seafood from "./images/seafood.jpg"
-import lambchops from "./images/lamb-chops.jpg"
-import cake from "./images/cake.jpg"
+import seafood from './images/seafood.jpg';
+import lambchops from './images/lamb-chops.jpg';
+import cake from './images/cake.jpg';
 
 function createMenuContent() {
   const menuContent = document.createElement('section');
-  menuContent.classList.add('menu')
+  menuContent.classList.add('menu');
   menuContent.innerHTML = `<div class="menu-items">
     <div class="menu-item">
       <img src="${seafood}" alt="Dish 1">
@@ -25,10 +25,9 @@ function createMenuContent() {
       <a href="#" class="order-btn">Order Now</a>
     </div>
   </div>`;
-  
+
   return menuContent;
 }
 
 // eslint-disable-next-line import/prefer-default-export
-export {createMenuContent};
-  
+export { createMenuContent };
